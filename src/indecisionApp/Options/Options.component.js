@@ -2,9 +2,7 @@ import React, { Component } from "react";
 import { Button } from "../../Component/CommenPagemap";
 import { Option } from "../Pagemap";
 class Options extends Component {
-  handleRemoveAllBtn () {
-    alert("remove all works");
-  };
+
 
   render() {
     return (
@@ -13,7 +11,7 @@ class Options extends Component {
           <span>
             <p style={{ display: "inline" }}>Your Options</p>
             <Button
-              onclickhandler={this.handleRemoveAllBtn}
+              onclickhandler={this.props.handleRemoveAllBtn}
               innerText={"Remove All"}
             />
           </span>
