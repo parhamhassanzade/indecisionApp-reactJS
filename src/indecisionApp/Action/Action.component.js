@@ -10,7 +10,7 @@ class Action extends Component {
       <div>
         {this.props.hasoption ? (
           <Button
-            // onclickhandler={this.actionhandler}
+            onclickhandler={this.props.handelPick}
             innerText={"What shoud I DO ?"}
           />
         ) : (

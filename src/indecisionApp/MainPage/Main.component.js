@@ -10,15 +10,26 @@ class Main extends Component {
     };
   }
 
+  //?remove all jobs
   handleRemoveAllBtn = () => {
     this.setState({ options: [] });
   };
+
+  //?pick job from options
+  handelPick = () => {
+    const randomNum = Math.floor(Math.random() * this.state.options.length);
+    const job = this.state.options[randomNum];
+    alert(job);
+  };
+
   render() {
     return (
       <div>
         <Header />
-        <Action hasoption={this.state.options.length > 0} />
-
+        <Action
+          handelPick={this.handelPick}
+          hasoption={this.state.options.length > 0}
+        />
         <Options
           handleRemoveAllBtn={this.handleRemoveAllBtn}
           options={this.state.options}
