@@ -6,7 +6,7 @@ class Main extends Component {
     super(props);
 
     this.state = {
-      options: ["option one", "option two", "option three"],
+      options: [],
     };
   }
 
@@ -22,6 +22,13 @@ class Main extends Component {
     alert(job);
   };
 
+  //? handle add option to the option component
+  handleAddOption=(option)=>{
+    this.setState({ 
+      options: this.state.options.concat([option])
+    })
+  }
+
   render() {
     return (
       <div>
@@ -34,7 +41,7 @@ class Main extends Component {
           handleRemoveAllBtn={this.handleRemoveAllBtn}
           options={this.state.options}
         />
-        <AddOptions />
+        <AddOptions handleAddOption={this.handleAddOption}/>
       </div>
     );
   }
