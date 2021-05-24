@@ -23,11 +23,14 @@ class Main extends Component {
   };
 
   //? handle add option to the option component
-  handleAddOption=(option)=>{
-    this.setState({ 
-      options: this.state.options.concat([option])
-    })
-  }
+  handleAddOption = (option) => {
+    if (this.state.options.indexOf(option) > -1) {
+      return alert("this item is already  ");
+    }
+    this.setState({
+      options: this.state.options.concat([option]),
+    });
+  };
 
   render() {
     return (
@@ -41,7 +44,7 @@ class Main extends Component {
           handleRemoveAllBtn={this.handleRemoveAllBtn}
           options={this.state.options}
         />
-        <AddOptions handleAddOption={this.handleAddOption}/>
+        <AddOptions handleAddOption={this.handleAddOption} />
       </div>
     );
   }
