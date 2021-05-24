@@ -18,7 +18,7 @@ class AddOptions extends Component {
   render() {
     return (
       <form onSubmit={this.handleAddOptionbtn}>
-        <input type="text" name="option" placeholder={"work todo..."} />
+        <input autocomplete="off" type="text" name="option" placeholder={"work todo..."} />
         <Button types="submit" innerText={"Add Option"} />
       </form>
     );
