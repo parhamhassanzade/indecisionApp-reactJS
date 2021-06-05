@@ -15,6 +15,13 @@ class Main extends Component {
     this.setState({ options: [] });
   };
 
+  //? remove single job handler
+  handleRemoveSinglejobBtn = (optionToDelete) => {
+    this.setState({
+      options:this.state.options.filter((option)=>{optionToDelete!==option})
+    })
+  };
+
   //?pick job from options
   handelPick = () => {
     const randomNum = Math.floor(Math.random() * this.state.options.length);
@@ -43,6 +50,7 @@ class Main extends Component {
         <Options
           handleRemoveAllBtn={this.handleRemoveAllBtn}
           options={this.state.options}
+          handleRemoveSinglejobBtn={this.handleRemoveSinglejobBtn}
         />
         <AddOptions handleAddOption={this.handleAddOption} />
       </div>

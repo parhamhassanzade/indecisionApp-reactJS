@@ -5,6 +5,7 @@ class AddOptions extends Component {
     super(props);
     this.handleAddOptionbtn = this.handleAddOptionbtn.bind(this);
   }
+  
   handleAddOptionbtn(e) {
     e.preventDefault();
 
@@ -18,7 +19,7 @@ class AddOptions extends Component {
   render() {
     return (
       <form onSubmit={this.handleAddOptionbtn}>
-        <input autocomplete="off" type="text" name="option" placeholder={"work todo..."} />
+        <input autoComplete="off" type="text" name="option" placeholder={"work todo..."} />
         <Button types="submit" innerText={"Add Option"} />
       </form>
     );
