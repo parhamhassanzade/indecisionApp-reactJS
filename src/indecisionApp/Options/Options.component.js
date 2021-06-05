@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import { Button } from "../../Component/CommenPagemap";
 import { Option } from "../Pagemap";
 class Options extends Component {
-
-
   render() {
     return (
       <>
@@ -16,7 +14,11 @@ class Options extends Component {
             />
           </span>
           {this.props.options.map((option) => (
-            <Option key={option} optionvalue={option} />
+            <Option
+              key={option}
+              optionvalue={option}
+              handleRemoveSinglejobBtn={this.props.handleRemoveSinglejobBtn}
+            />
           ))}
         </header>
       </>
