@@ -10,6 +10,23 @@ class Main extends Component {
     };
   }
 
+  //?set the data to dom in first render
+  componentDidMount() {
+    const data = localStorage.getItem("job");
+    const jobs = JSON.parse(data);
+    if (jobs) {
+      this.setState({
+        options: jobs,
+      });
+    }
+  }
+
+  //?save data to localstorage after update state
+  componentDidUpdate() {
+    const json = JSON.stringify(this.state.options);
+    localStorage.setItem("job", json);
+  }
+
   //?remove all jobs
   handleRemoveAllBtn = () => {
     this.setState({ options: [] });
@@ -18,8 +35,10 @@ class Main extends Component {
   //? remove single job handler
   handleRemoveSinglejobBtn = (optionToDelete) => {
     this.setState({
-      options:this.state.options.filter((option)=>{optionToDelete!==option})
-    })
+      options: this.state.options.filter((option) => {
+        optionToDelete !== option;
+      }),
+    });
   };
 
   //?pick job from options

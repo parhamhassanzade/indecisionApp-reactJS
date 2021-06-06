@@ -4,7 +4,7 @@ class Button extends Component {
     return (
       <>
         <button
-        
+          disabled={false}
           type={this.props.types || "button"}
           onClick={this.props.onclickhandler}
         >
