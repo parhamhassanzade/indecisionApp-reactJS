@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { ModalPage } from "../../Component/CommenPagemap";
 import { Header, Action, Options, AddOptions } from "../Pagemap";
 
 class Main extends Component {
@@ -72,6 +73,7 @@ class Main extends Component {
           handleRemoveSinglejobBtn={this.handleRemoveSinglejobBtn}
         />
         <AddOptions handleAddOption={this.handleAddOption} />
+        <ModalPage/>
       </div>
     );
   }
