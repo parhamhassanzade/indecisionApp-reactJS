@@ -1,0 +1,28 @@
+$base-font: cursive;
+body {
+  margin: 0;
+  padding: 0;
+}
+header {
+  height: 15vmin;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #542e71;
+  position: relative;
+
+  & h1,
+  h3 {
+    margin: 0%;
+    padding: 0%;
+    flex-grow: 2;
+    color: #fb3640;
+    font-family: $base-font;
+    @if $base-font!=cursive {
+      font-family: monospace, system-ui;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  }
+}

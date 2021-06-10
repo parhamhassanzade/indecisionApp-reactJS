@@ -5,7 +5,7 @@ class Options extends Component {
   render() {
     return (
       <>
-        <header>
+        <section>
           <span>
             <p style={{ display: "inline" }}>Your Options</p>
             <Button
@@ -20,7 +20,7 @@ class Options extends Component {
               handleRemoveSinglejobBtn={this.props.handleRemoveSinglejobBtn}
             />
           ))}
-        </header>
+        </section>
       </>
     );
   }
