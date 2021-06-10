@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { ModalPage } from "../../Component/CommenPagemap";
 import { Header, Action, Options, AddOptions } from "../Pagemap";
-
+import style from "../MainPage/main.module.scss";
 class Main extends Component {
   constructor(props) {
     super(props);
@@ -61,7 +61,7 @@ class Main extends Component {
 
   render() {
     return (
-      <div>
+      <div className={style.body}>
         <Header />
         <Action
           handelPick={this.handelPick}
@@ -73,7 +73,7 @@ class Main extends Component {
           handleRemoveSinglejobBtn={this.handleRemoveSinglejobBtn}
         />
         <AddOptions handleAddOption={this.handleAddOption} />
-        <ModalPage/>
+        <ModalPage />
       </div>
     );
   }
