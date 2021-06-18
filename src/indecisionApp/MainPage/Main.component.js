@@ -37,7 +37,7 @@ class Main extends Component {
   handleRemoveSinglejobBtn = (optionToDelete) => {
     this.setState({
       options: this.state.options.filter((option) => {
-        optionToDelete !== option;
+        return( optionToDelete !== option)
       }),
     });
   };
